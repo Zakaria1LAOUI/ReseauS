@@ -46,7 +46,7 @@ function ExplorePage() {
 
     return (
         <div className="mt-14 px-4 max-w-xl mx-auto max-h-100 overflow-y-auto">
-            <div className="text-lg font-bold">Talented people may impress you:</div>
+            <div className="text-lg text-purple-500 font-bold">Talented people may impress you:</div>
             <ul className="mt-6 divide-y divide-gray-200">
                 {users.map(user => (
                     <li key={user._id} className="py-4 flex items-center justify-between border border-gray-300 shadow rounded">

@@ -17,6 +17,11 @@ import ProfilePage from './Pages/ProfilePage';
 import ExplorePage from './Pages/ExplorePage';
 import SearchPage from './Pages/ResearchPage';
 import CourseUploadPage from './Pages/CourseUploadPage';
+import NetworkingPage from './Pages/NetworkingPage';
+import MesEchangesPage from './Pages/MesEchangesPage';
+import ConsulterExpertPage from './Pages/ConsulterExpertPage';
+import DemanderMentoratPage from './Pages/DemanderMentoratPage';
+import DiscussionPage from './Pages/DiscussionPage';
 
 
 axios.defaults.baseURL = 'http://localhost:4000' 
@@ -38,10 +43,15 @@ function App(){
                     <Route path=':id/navigation' element={<NavigationBar />}>
                         <Route path='home' element={<HomePage />}/>
                         <Route path='explore' element={<ExplorePage />} />
-                        <Route path='courses' element={<CoursesPage />}/>
-                            
+                        <Route path='courses' element={<CoursesPage />}/>   
+                        <Route path='networking' element={<NetworkingPage />}/>
+                        <Route path="networking/mes-echanges" element={<MesEchangesPage />} />
+                        <Route path="networking/consulter-expert" element={<ConsulterExpertPage />} />
+                        <Route path="networking/demander-mentorat" element={<DemanderMentoratPage />} />
+                        
                         <Route path='competitions' element={<CompetitionsPage />}/>
                     </Route>
+                    <Route path="/discussion/:id" element={<DiscussionPage/>} />
                 </Route>
             </Routes>
         </UserContextProvider>
