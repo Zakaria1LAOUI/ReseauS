@@ -590,13 +590,11 @@ app.delete('/courses/:userId/unfollow', async (req, res) => {
   
 
 
-
-
-  
+const port = process.env.PORT || 4000; 
   
 
 // Lancement du serveur sur le port 4000
-app.listen(4000)
+app.listen(port)
 
 
 
